@@ -1,5 +1,3 @@
-require "human_player"
-
 class Board
 
     def initialize

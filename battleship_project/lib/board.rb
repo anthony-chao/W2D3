@@ -3,7 +3,7 @@ class Board
     attr_reader :size
     attr_accessor :grid
 
-    def self.print_grid(arr)                            #I always struggle on these class methods
+    def self.print_grid(arr)                            #I always struggle on these class methods - this method doesn't care about the instances of the board class
         arr.each do |sub_arr| 
             puts sub_arr.join(" ")
         end 
@@ -22,7 +22,7 @@ class Board
         @grid[position[0]][position[1]] = value
     end
 
-    def num_ships
+    def num_ships                                   #to use an instance method, we have to use 
         count = 0
         @grid.flatten.each { |ele| count +=1 if ele != :N }
         count
